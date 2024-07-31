@@ -14,7 +14,6 @@
 
 @mixin reset-button {
    cursor: pointer;
-   display: inline-flex;
    padding: 0;
    background-color: transparent;
    border: none;
@@ -48,7 +47,7 @@
    border-radius: 50%;
 }
 
-@mixin fluid-property($property, $max, $min, $maxWidth: 1460, $minWidth: 320) {
+@mixin fluid-property($property, $max, $min, $maxWidth: 1200, $minWidth: 320) {
    $v: math.div((100 * ($max - $min)), ($maxWidth - $minWidth));
    $r: math.div((($minWidth * $max) - ($maxWidth * $min)), ($minWidth - $maxWidth));
 

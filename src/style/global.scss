@@ -1,5 +1,5 @@
 body {
-   font-family: "Plus Jakarta Sans";
+   font-family: "Plus Jakarta Sans", sans-serif;
    font-weight: 500;
    font-size: toRem(20);
    background-color: var(--clr-dark);
@@ -7,7 +7,7 @@ body {
 }
 
 a {
-   text-decoration: underline;
+   text-decoration: none;
    color: inherit;
 }
 
