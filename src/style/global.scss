@@ -1,0 +1,26 @@
+body {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 500;
+   font-size: toRem(20);
+   background-color: var(--clr-dark);
+   color: var(--clr-white);
+}
+
+a {
+   text-decoration: underline;
+   color: inherit;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   @supports (overflow: clip) {
+      overflow: clip;
+   }
+   // Прижимаем футер
+   > main {
+      flex: 1 1 auto;
+   }
+}
