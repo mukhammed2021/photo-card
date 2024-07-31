@@ -157,6 +157,12 @@
          transition: opacity 0.3s;
          color: #bdbdbd;
       }
+      &:focus-visible::placeholder {
+         opacity: 0;
+      }
+      &:focus-visible {
+         outline: toRem(1) solid var(--clr-yellow);
+      }
       &::-webkit-search-decoration,
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button,

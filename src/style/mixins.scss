@@ -59,10 +59,4 @@
    background-color: transparent;
    border: none;
    width: 100%;
-   &:focus-visible {
-      outline: toRem(1) solid var(--clr-yellow);
-   }
-   &:focus-visible::placeholder {
-      opacity: 0;
-   }
 }
