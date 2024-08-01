@@ -7,7 +7,13 @@
    }
 }
 .top-header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
    padding-top: toRem(38);
+   background-color: var(--clr-dark);
+   z-index: 50;
    // .top-header__container
    &__container {
    }
@@ -19,7 +25,6 @@
       justify-content: space-between;
       min-height: toRem(70);
       padding-bottom: toRem(15);
-      border-bottom: toRem(1) solid var(--clr-white);
    }
    // .top-header__logo
    &__logo {
@@ -134,6 +139,7 @@
    }
 }
 .bottom-header {
+   padding-top: toRem(123);
    // .bottom-header__container
    &__container {
    }
@@ -141,6 +147,7 @@
    &__wrapper {
       padding-block: toRem(21);
       text-align: center;
+      border-top: toRem(1) solid var(--clr-white);
       border-bottom: toRem(1) solid var(--clr-white);
    }
    // .bottom-header__input
