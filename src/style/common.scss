@@ -10,3 +10,25 @@
    clip: rect(0 0 0 0) !important;
    overflow: hidden !important;
 }
+
+.button {
+   @include reset-button;
+   @include flex-center(true);
+   @include fluid-property("gap", 16, 8);
+   text-transform: uppercase;
+   line-height: 125%; /* 25/20 */
+   @include fluid-property("font-size", 20, 12);
+   @include fluid-property("padding-block", 20, 12);
+   @include fluid-property("padding-inline", 40, 16);
+   border-radius: toRem(56);
+   svg {
+      @include square(24);
+   }
+   &--white {
+      background-color: var(--clr-white);
+      color: var(--clr-dark);
+   }
+   @media (max-width: toEm(479.98)) {
+      width: 100%;
+   }
+}
