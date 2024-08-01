@@ -27,7 +27,7 @@
       @include circle(70);
       overflow: hidden;
       @media (max-width: toEm(767.98)) {
-         z-index: 2;
+         z-index: 6;
       }
    }
    // .top-header__menu
@@ -50,7 +50,7 @@
          @include square(24);
       }
       @media (max-width: toEm(767.98)) {
-         z-index: 2;
+         z-index: 5;
       }
    }
 }
@@ -67,6 +67,7 @@
          padding: toRem(120) toRem(15) toRem(30) toRem(15);
          overflow: auto;
          transition: left 0.3s;
+         z-index: 5;
          &::before {
             content: "";
             position: fixed;
