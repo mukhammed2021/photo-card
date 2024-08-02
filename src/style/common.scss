@@ -21,6 +21,8 @@
    @include fluid-property("padding-block", 20, 12);
    @include fluid-property("padding-inline", 40, 16);
    border-radius: toRem(56);
+   background-color: var(--clr-dark);
+   color: var(--clr-white);
    svg {
       @include square(24);
    }
