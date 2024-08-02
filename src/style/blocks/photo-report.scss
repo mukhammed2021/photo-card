@@ -84,7 +84,7 @@
             left 0.3s;
       }
       span {
-         transition: opacity 0.3s;
+         transition: opacity 0.3s, visibility 0.3s;
          display: flex;
          justify-content: space-between;
          gap: toRem(15);
@@ -98,6 +98,8 @@
       &:hover {
          span {
             opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
          }
          a {
             width: 100%;
