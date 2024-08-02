@@ -8,4 +8,12 @@ const SVG_FOLDER_PATH = path.resolve(SRC_PATH, "svg-sprite");
 
 export default defineConfig({
    plugins: [injectHTML(), createSvgSpritePlugin({ svgFolder: SVG_FOLDER_PATH })],
+   build: {
+      rollupOptions: {
+         input: {
+            main: path.resolve(__dirname, "index.html"),
+            vacancies: path.resolve(__dirname, "src/html/pages/vacancies/index.html"),
+         },
+      },
+   },
 });

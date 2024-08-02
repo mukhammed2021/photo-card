@@ -1,0 +1,49 @@
+.vacancies {
+   @include fluid-property("padding-top", 39, 20);
+   @include fluid-property("padding-bottom", 134, 67);
+   // .vacancies__container
+   &__container {
+   }
+   // .vacancies__item-button
+   &__item-button {
+      text-align: center;
+      &:not(:last-child) {
+         @include fluid-property("margin-bottom", 60, 30);
+      }
+   }
+   // .vacancies__button
+   &__button {
+      background-color: var(--clr-yellow);
+      color: var(--clr-dark);
+      font-weight: 600;
+   }
+   // .vacancies__text
+   &__text {
+      font-weight: 600;
+      line-height: 125%; /* 25/20 */
+      color: var(--clr-yellow);
+      text-align: center;
+      &:not(:last-child) {
+         @include fluid-property("margin-bottom", 63, 31);
+      }
+   }
+   // .vacancies__items
+   &__items {
+      display: grid;
+      gap: toRem(38);
+   }
+   // .vacancies__item
+   &__item {
+      background-color: var(--clr-yellow);
+      border-radius: toRem(56);
+   }
+   // .vacancies__label
+   &__label {
+      @include fluid-property("padding-block", 20, 10);
+      @include fluid-property("padding-inline", 40, 20);
+      @include fluid-property("font-size", 20, 14);
+      color: var(--clr-dark);
+      font-weight: 600;
+      line-height: 125%; /* 25/20 */
+   }
+}
