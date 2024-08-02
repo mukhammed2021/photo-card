@@ -13,21 +13,21 @@
       display: flex;
       justify-content: space-between;
       gap: toRem(40);
-      @media (min-width: toEm(767.98)) {
-         align-items: flex-end;
-      }
       @media (max-width: toEm(767.98)) {
          flex-direction: column;
       }
    }
    // .photo-report__body
    &__body {
+      display: flex;
+      flex-direction: column;
       @media (min-width: toEm(767.98)) {
          flex: 0 1 toRem(536);
       }
    }
    // .photo-report__title
    &__title {
+      flex: 1 1 auto;
       @include fluid-property("font-size", 72, 20);
       font-weight: 800;
       line-height: 126.388889%; /* 91/72 */
