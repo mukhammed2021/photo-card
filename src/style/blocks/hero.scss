@@ -103,10 +103,9 @@
    }
 }
 .slide-thumbs-hero {
-   &.swiper-slide-active {
+   &.swiper-slide-thumb-active {
       .slide-thumbs-hero__image {
          border: toRem(3) solid var(--clr-yellow);
-         // max-width: toRem(470);
          img {
             aspect-ratio: 470 / 251;
          }

@@ -1,6 +1,6 @@
 // базовая версия + модули навигации и пагинации
 import Swiper from "swiper";
-import { Navigation, Thumbs, Parallax } from "swiper/modules";
+import { Navigation, Thumbs, Parallax, Autoplay } from "swiper/modules";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -17,6 +17,10 @@ if (document.querySelector(".hero")) {
       speed: 800,
       observer: true,
       observeParents: true,
+      autoplay: {
+         delay: 3000,
+         disableOnInteraction: false,
+      },
       breakpoints: {
          320: {
             slidesPerView: 1.2,
@@ -33,7 +37,7 @@ if (document.querySelector(".hero")) {
       },
    });
    new Swiper(".hero__slider", {
-      modules: [Navigation, Thumbs, Parallax],
+      modules: [Navigation, Thumbs, Parallax, Autoplay],
       parallax: true,
       loop: true,
       navigation: {
@@ -48,7 +52,7 @@ if (document.querySelector(".hero")) {
       observer: true,
       observeParents: true,
       autoplay: {
-         delay: 3000,
+         delay: 5000,
          disableOnInteraction: false,
       },
       thumbs: {
