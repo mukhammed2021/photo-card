@@ -1,0 +1,32 @@
+.vacancy {
+   @include fluid-property("padding-top", 71, 35);
+   @include fluid-property("padding-bottom", 80, 40);
+   // .vacancy__container
+   &__container {
+   }
+   // .vacancy__body
+   &__body {
+      @include fluid-property("padding-top", 29, 19);
+      @include fluid-property("padding-bottom", 42, 22);
+      @include fluid-property("padding-left", 56, 28);
+      padding-right: toRem(50);
+      background-color: var(--clr-yellow);
+      color: var(--clr-dark);
+      display: flex;
+      align-items: flex-end;
+      gap: toRem(15);
+      @media (max-width: toEm(767.98)) {
+         flex-direction: column;
+      }
+   }
+   // .vacancy__title
+   &__title {
+      font-weight: 800;
+      line-height: 126.388889%; /* 91/72 */
+      @include fluid-property("font-size", 72, 28);
+      text-transform: uppercase;
+   }
+   // .vacancy__button
+   &__button {
+   }
+}
