@@ -1,6 +1,6 @@
 .photo-portal {
    padding-top: toRem(22);
-   padding-bottom: toRem(22);
+   @include fluid-property("padding-bottom", 60, 30);
    // .photo-portal__container
    &__container {
    }
