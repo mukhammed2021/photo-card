@@ -1,0 +1,77 @@
+.footer {
+   @include fluid-property("padding-bottom", 106, 50);
+   // .footer__container
+   &__container {
+   }
+   // .footer__body
+   &__body {
+      border-top: toRem(1) solid #beaa8c;
+      @include fluid-property("padding-top", 60, 30);
+   }
+   // .footer__list
+   &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: toRem(48);
+      row-gap: toRem(24);
+      &:not(:last-child) {
+         margin-bottom: toRem(70);
+         @media (max-width: toEm(767.98)) {
+            margin-bottom: toRem(35);
+         }
+      }
+   }
+   // .footer__item
+   &__item {
+   }
+   // .footer__link
+   &__link {
+      line-height: 125%; /* 25/20 */
+      text-transform: uppercase;
+
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      &::after {
+         content: attr(data-text);
+         content: attr(data-text) / "";
+         height: 0;
+         visibility: hidden;
+         overflow: hidden;
+         user-select: none;
+         pointer-events: none;
+         font-weight: 700;
+         @media speech {
+            display: none;
+         }
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            font-weight: 700;
+         }
+      }
+   }
+   // .footer__soc1al
+   &__soc1al {
+   }
+}
+.soc1al {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: toRem(4);
+   // .soc1al__item
+   &__item {
+   }
+   // .soc1al__link
+   &__link {
+   }
+   // .soc1al__image
+   &__image {
+      @include square(26);
+   }
+}
