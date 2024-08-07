@@ -26,6 +26,7 @@
       min-height: toRem(70);
       padding-bottom: toRem(15);
    }
+   
    // .top-header__logo
    &__logo {
       flex: 0 0 toRem(70);
@@ -149,6 +150,10 @@
       text-align: center;
       border-top: toRem(1) solid var(--clr-white);
       border-bottom: toRem(1) solid var(--clr-white);
+   }
+   &__back-color{
+      position: absolute;
+      
    }
    // .bottom-header__input
    &__input {

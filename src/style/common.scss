@@ -47,7 +47,8 @@
    // .photo-portal__title
    &__title {
       text-align: center;
-      position: relative;
+      position: relative;        
+      line-height: 26px;
       &::before {
          content: "";
          position: absolute;
@@ -58,6 +59,7 @@
          height: toRem(1);
          background-color: var(--clr-white);
          z-index: -1;
+ 
       }
       h2 {
          margin: 0;
@@ -65,11 +67,14 @@
          background-color: var(--clr-yellow);
          color: var(--clr-dark);
          font-weight: 500;
-         text-transform: uppercase;
+         text-transform: uppercase;      
+         width: 248px;
+         height: 69px;
          @include fluid-property("font-size", 26, 12);
          line-height: 126.923077%; /* 33/26 */
-         padding: toEm(12, 26) toEm(6, 26);
+         padding: toEm(11, 24) toEm(5, 24);
          border-radius: toEm(20, 26);
+         line-height: 25px;
       }
       &:not(:last-child) {
          margin-bottom: toRem(22);
@@ -355,5 +360,93 @@
          }
       }
    }  
+
+}
+
+//========================================================================================================================================================
+
+.anonces {
+   max-width: 1440px;
+   display: grid;
+   grid-template-columns: 100%;
+   justify-content: space-between;
+   column-gap: clamp(1.5rem, 6.712652192vw + -1.721989144rem, 3.3125rem);
+   row-gap: 2.0625rem;
+   margin: 60px auto 0;
+   border-top: 0.0625rem solid var(--clr-white);
+
+   &__row {
+       display: flex;
+       justify-content: space-around;
+       margin:60px 0 30px;
+       width: 100%;
+   }
+
+   // last row
+   & > :last-child {
+      margin-bottom: 100px;
+   }
+
+   &__block {
+       position: relative;
+       width: 700px;
+       img{
+
+         aspect-ratio: 700 / 400;
+         transition: scale 0.3s;
+       }
+   }
+
+   &__image {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+
+   &__party {
+       position: absolute;
+       bottom: 10px;
+       left: 10px;
+       background-color: rgba(0, 0, 0, 0.5);
+       padding: 10px;
+
+       color: #FFF;
+   }
+
+   &__text-block {
+       width: 650px;
+       color: #FFF;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: left;
+       font-size: 20px;
+       line-height: 1.5;
+       &__second{
+         text-align: right;
+       }
+   }
+
+   &__text-content {
+       padding: 10px;
+       @media (max-width:toEm(767)) {
+         padding: 0;
+       }
+       p{
+         font-size: 24px;
+         font-weight: 800;    
+         font-size: clamp(0.625rem, 1.3vw + 0.25rem, 1.5rem);
+         @media (max-width:toEm(767)) {
+            display: none;
+            br{
+               display: none;
+            }
+         }
+      }
+       & > :first-child {
+         text-align: center;
+         display: block;
+      }
+}
 
 }
