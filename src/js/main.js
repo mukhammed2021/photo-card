@@ -1,5 +1,6 @@
 import "./swiper";
 import "../style/style.scss";
+import "./back-color";
 
 document.addEventListener("click", documentActions);
 
