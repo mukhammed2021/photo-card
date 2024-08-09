@@ -12,7 +12,7 @@
                         <a data-text="фото" href="/src/html/pages/photos/index.html" class="menu__link">фото</a>
                      </li>
                      <li class="menu__item">
-                        <a data-text="анонсы" href="/html/pages/anonces/index.html" class="menu__link">анонсы</a>
+                        <a data-text="анонсы" href="/src/html/pages/anonces/index.html" class="menu__link">анонсы</a>
                      </li>
                      <li class="menu__item">
                         <a data-text="заведения" href="#" class="menu__link">заведения</a>
@@ -20,11 +20,20 @@
                      <li class="menu__item">
                         <a data-text="контакты" href="#" class="menu__link">контакты</a>
                      </li>
+                     <li class="menu__item menu__parameters">
+                        <button type="button" class="menu-item top-header__language">
+                           <span>русский</span>
+                           <svg>
+                              <use xlink:href="#arrow" />
+                           </svg>
+                        </button>
+                     </li>
+ 
                   </ul>
                </div>
             </nav>
             <div class="top-header__actions">
-               <button type="button" class="top-header__language">
+               <button type="button" class="top-header__language language-second">
                   <span>русский</span>
                   <svg>
                      <use xlink:href="#arrow" />
@@ -42,9 +51,14 @@
 
          <div class="bottom-header__wrapper">
             <input type="search" placeholder="Поиск" class="bottom-header__input">
-               <div class="bottom-header__back-color">
+            <div class="bottom-header__back-color">
+               <a href="№" id="mode__light" onclick="changeToLight(event)">
                   <img src="/public/img/header/light-mode.svg" alt="" class="bottom-header__color-mode__light">
-               </div>
+               </a>
+               <a href="№" id="mode__dark" onclick="changeToDark(event)">
+                  <img src="/public/img/header/dark-mode.svg" alt="" class="bottom-header__color-mode__dark">
+               </a>
+            </div>
          </div>
       </div>
    </div>
